@@ -1,10 +1,14 @@
-import { Fragment } from 'react'
+import { PlayerProvider } from "./Components/Player/usePlayer";
+import { PlayGround } from "./Components/Player/PlayGround";
+
 function App() {
   return (
-    <Fragment>
-      <h1 className="text-red-400 font-sans text-4xl font-bold">Hallo Gaes</h1>
-    </Fragment>
-  )
+    <div>
+      <PlayerProvider>
+        <PlayGround />
+      </PlayerProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;
