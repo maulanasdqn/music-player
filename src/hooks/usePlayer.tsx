@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
-import { musics } from "@musics";
+import { musics } from "../musics";
 import { Player } from "@components/Player";
 import { CurrentMusicType, PlayerContextType } from "@util/types";
 import { defaultMusic } from "@components/common/utils";
