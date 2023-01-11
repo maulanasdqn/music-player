@@ -1,13 +1,14 @@
-import { PlayerProvider } from "./Components/Player/usePlayer";
-import { PlayGround } from "./Components/Player/PlayGround";
+import { PlayerProvider } from "@hooks/usePlayer";
+import { PlayGround } from "@components/PlayGround";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <PlayerProvider>
         <PlayGround />
       </PlayerProvider>
-    </div>
+    </Fragment>
   );
 }
 

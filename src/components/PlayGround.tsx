@@ -1,10 +1,10 @@
-import { DefaultThumbnail } from "./DefaultThumbnail";
-import { usePlayer } from "./usePlayer";
+import { DefaultThumbnail } from "@components/DefaultThumbnail";
+import { usePlayer } from "@hooks/usePlayer";
 
 export const PlayGround = () => {
   const { playList, setCurrentMusic, currentMusic } = usePlayer();
   return (
-    <div className="w-screen h-screen overflow-auto bg-[#1e1e2f]">
+    <section className="w-screen h-screen overflow-auto bg-[#1e1e2f]">
       <div className="flex flex-col max-w-lg gap-4 mx-4 md:mx-auto mt-6 mb-20">
         {playList.map((music) => {
           const isPlaying = currentMusic.src === music.src;
@@ -22,7 +22,7 @@ export const PlayGround = () => {
                 {music.thumbnail ? (
                   <img
                     className="rounded-lg h-full w-full object-cover"
-                    alt={music.title}
+                    alt={music.title as string}
                     src={music.thumbnail}
                   />
                 ) : (
@@ -37,6 +37,6 @@ export const PlayGround = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };

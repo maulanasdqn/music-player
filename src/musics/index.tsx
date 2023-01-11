@@ -64,4 +64,12 @@ export const musics: MusicsType[] = [
     artist: "Glass Animals",
     thumbnail: "src/musics/playlist/Glass Animals.webp",
   },
+  {
+    id: 9,
+    title: "Boy Friend",
+    src: "src/musics/playlist/Ariana Grande, Social House - boyfriend (Official Video).mp3",
+    artist: "Ariana grande",
+    thumbnail:
+      "src/musics/playlist/Ariana Grande, Social House - boyfriend (Official Video).jpg",
+  },
 ];

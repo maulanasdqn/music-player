@@ -1,4 +1,4 @@
-import { CurrentMusicType } from "./types";
+import { CurrentMusicType } from "@util/types";
 
 export const secondsToMinutes = (sec: number | undefined) => {
   if (!sec) return "00:00";

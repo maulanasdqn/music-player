@@ -28,7 +28,8 @@
       "@router/*": ["router/*"],
       "@layouts/*": ["layouts/*"],
       "@service/*": ["service/*"],
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@musics/*": ["musics/*"]
     }
   },
   "include": ["src"],

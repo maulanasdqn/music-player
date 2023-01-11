@@ -9,9 +9,9 @@ import {
   TbVolume,
   TbVolume3,
 } from "react-icons/tb";
-import { DefaultThumbnail } from "./DefaultThumbnail";
-import { usePlayer } from "./usePlayer";
-import { secondsToMinutes } from "./utils";
+import { DefaultThumbnail } from "@components/DefaultThumbnail";
+import { usePlayer } from "@hooks/usePlayer";
+import { secondsToMinutes } from "@components/common/utils";
 
 export const Player = () => {
   const [isVolumeOpen, setIsVolumeOpen] = useState(false);
@@ -79,7 +79,7 @@ export const Player = () => {
   }, [currentMusic.src]);
 
   const skipNext = (src: string) => {
-    const idx = playList.findIndex((m) => m.src === src);
+    const idx = playList.findIndex((m: { src: string }) => m.src === src);
 
     // if we are in last music
     if (idx === playList.length - 1) {
@@ -91,7 +91,7 @@ export const Player = () => {
   };
 
   const skipPrev = (src: string) => {
-    const idx = playList.findIndex((m) => m.src === src);
+    const idx = playList.findIndex((m: { src: string }) => m.src === src);
 
     if (idx === 0) {
       setCurrentMusic(playList[playList.length - 1]);
